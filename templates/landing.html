@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="landing-hero redesigned">
+    <div class="hero-content hero-glass-card">
+        <h1 class="hero-title">Attendance Tracker</h1>
+        <div class="hero-tagline">Your smart companion for accurate, stress-free attendance and class planning.</div>
+        <p class="hero-subtitle">Effortless Attendance Management for Students</p>
+        <ul class="feature-list">
+            <li><i class="fas fa-bolt animated-icon"></i> Fast & Secure Attendance Scraping</li>
+            <li><i class="fas fa-chart-pie animated-icon"></i> Beautiful Attendance Analytics</li>
+            <li><i class="fas fa-user-check animated-icon"></i> Real-time Progress & Feedback</li>
+            <li><i class="fas fa-calculator animated-icon"></i> Classes skip Calculator: Plan Your Weeks</li>
+            <li><i class="fas fa-mobile-alt animated-icon"></i> Mobile-Friendly Modern UI</li>
+        </ul>
+        <a href="{{ url_for('index') }}" class="get-started-btn" href="/app">Get Started</a>
+    </div>
+</div>
+<footer class="modern-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>Attendance Tracker</h3>
+            <p>Simplifying attendance management since 2025</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/Harshith106" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/p-harshith-09b357354/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://yourportfolio.com" target="_blank" aria-label="Portfolio">
+                <i class="fas fa-globe"></i>
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Attendance Tracker. All rights reserved.</p>
+    </div>
+</footer>
+{% endblock %}
