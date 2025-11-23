@@ -5,9 +5,12 @@ WORKDIR /app
 # Install uv
 RUN pip install uv
 
-# Copy project files
-COPY pyproject.toml uv.lock ./
-COPY *.py ./
+# Copy Backend project files
+COPY Backend/pyproject.toml Backend/uv.lock ./
+COPY Backend/*.py ./
+
+# Copy frontend dist folder
+COPY dist /dist
 
 # Install dependencies
 RUN uv sync --frozen --no-install-project
