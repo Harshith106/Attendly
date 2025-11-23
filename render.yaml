@@ -16,6 +16,7 @@ services:
   - type: web
     name: praesentia-backend
     env: docker
+    dockerfilePath: ./Backend/Dockerfile
     dockerContext: ./Backend
     plan: free
     envVars:
