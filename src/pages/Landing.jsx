@@ -38,7 +38,7 @@ const Landing = () => {
                             transition={{ delay: 0.2, duration: 0.8 }}
                             className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight"
                         >
-                            <span className="text-gradient">Praesentia</span>
+                            <span className="text-gradient">Attendance Tracker</span>
                         </motion.h1>
 
                         <motion.p

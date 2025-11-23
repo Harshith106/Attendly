@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
-                        <h3 className="text-xl font-bold text-white mb-2">Praesentia</h3>
+                        <h3 className="text-xl font-bold text-white mb-2">Attendance Tracker</h3>
                         <p className="text-gray-400 text-sm">By <span className="text-white font-medium">Harshith</span></p>
                     </div>
 

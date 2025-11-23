@@ -1,4 +1,5 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+// Use relative URLs since frontend and backend are on the same domain
+const API_BASE_URL = '';
 
 export const api = {
     async loginAndScrape(username, password) {

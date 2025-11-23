@@ -19,7 +19,7 @@ const Navbar = () => {
                         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--accent)] to-[var(--primary)] flex items-center justify-center text-white group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all">
                             <GraduationCap size={20} />
                         </div>
-                        <span className="font-bold text-xl tracking-tight text-white">Praesentia</span>
+                        <span className="font-bold text-xl tracking-tight text-white">Attendance Tracker</span>
                     </Link>
 
                     {/* Desktop Menu */}
