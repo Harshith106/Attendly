@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-white/5 text-center text-gray-500 text-sm">
-                    <p>&copy; 2025 Praesentia. All rights reserved.</p>
+                    <p>&copy; 2025 Attendance Tracker. All rights reserved.</p>
                 </div>
             </div>
         </footer>
