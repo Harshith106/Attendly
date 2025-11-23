@@ -67,6 +67,7 @@ async def scrape_attendance_endpoint(request: LoginRequest):
     return data
 
 @app.get("/health")
+@app.head("/health")
 async def health_check():
     return {"status": "ok", "browser_ready": BrowserManager.get_browser() is not None}
 
@@ -81,11 +82,8 @@ if os.path.exists(frontend_dist_path):
     
     # Catch-all route for SPA (React Router)
     @app.get("/{full_path:path}")
+    @app.head("/{full_path:path}")
     async def serve_frontend(full_path: str):
-        # If API route, let it pass (though API routes are defined above, so they take precedence)
-        # But we need to be careful not to shadow API routes if defined later.
-        # Since API routes are defined BEFORE this catch-all, they are safe.
-        
         # Serve index.html for any other route
         return FileResponse(os.path.join(frontend_dist_path, "index.html"))
 else:
