@@ -1,12 +1,23 @@
 services:
+  # Frontend Service (Static Site)
   - type: web
-    name: attendance-tracker
-    env: docker
-    dockerfilePath: ./Dockerfile
-    plan: free
-    healthCheckPath: /
+    name: praesentia-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.0
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: praesentia-backend
+          property: host
+
+  # Backend Service (Docker)
+  - type: web
+    name: praesentia-backend
+    env: docker
+    dockerContext: ./Backend
+    plan: free
+    envVars:
       - key: PORT
-        value: 8080
+        value: 8000
